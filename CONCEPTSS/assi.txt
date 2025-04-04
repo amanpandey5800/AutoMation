@@ -1,0 +1,36 @@
+1. product : Gmail
+2. Features : Login
+3. Test Scenario :
+3.1) To verify that user can login successfully. // to test Login feature.
+
+4) 
+ valid test data : e1@gmail.com , 123456
+invalid test data : e2@gmail.com , 112233
+
+5) Write TCD:
+
+5.1) For a valid email id and password, verify that the login is successful.
+5.2) For an invalid email id and password , verify that the login is unsuccssful and error message is displayed
+
+========================================================================================================================================================
+
+Product - Phonepe
+Features - Having unique account on Phonepe application to work.
+	   Sending and recieving payments using upi securely.
+	   it can Manage multiple accounts in one application.
+	   Can work across in all  mobile Operating Systems 
+
+Test Scenerio
+3.1) To verify that user is having a valid upi id as well as PHONEPE account id or not.
+3.2) Verify the the data is valid or not whom user is trying to send money.and also verify his upi pin before sending the money.
+
+4) 
+Valid test data : e1@oksbi , pin = 123456
+invalid test data : e2@oksbi , pin = 654321
+
+5) Write TCD
+	5.1) For a valid id and password the phonepe account verify the details and login will be successful 
+	5.2) For invalid id or invalid verification the phonepay login page will throw the error message which is to be displayed.
+	5.3) For successfully entering the verified upi id and correctly verified upi pin the payment  should be  successfull.
+	5.4) After sending the payment successfully the message of sending money completeion should be displayed or after unsuccessful payment it will
+ 	throw an error based on different types of error 

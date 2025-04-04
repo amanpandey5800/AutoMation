@@ -1,0 +1,24 @@
+===============================Cucumber==================================================================================
+
+* BEHAVIOUR_DRIVER DVELOPMENT (BDD)
+
+BDD is a software development approach that encourages collaboration between developers, testers and buisness stakholders
+
+Uses Gherkin syntax(Given -When-Then) to describe application behaviour in a non-technical, common english - like language.
+
+Cucumber is the most popular tool for BDD automation testing.
+
+Gherkin Language ============================================================================================================
+
+Scenerio - Its Just like the test scenerio ex - Login is failed for invalid login credentials
+
+Given  -  (Pre condition for AUT)  ex - The login page is displayed
+
+When - Its the user Action
+Then  - expected Behaviour ex - Products page is displayed
+
+runnerile - It will tell cucumber where the feature file is present.
+==============================================================================================================================
+
+* to run any specific scenerio in cucumber place tags="@scenerio" in runtest.java ex - tags="@set5"
+

@@ -1,0 +1,11 @@
+--------------------------------------------OOPS------------------------------------------------------------------
+
+
+* CLASS AND OJECT
+A class is a blueprint or a template which defines the data fields & actions that an object can perform.
+Class will not occupy any mmory space.
+An object is th replica of the class and memory is used to store it.
+
+Constructor is a method which is used to create an object The name of the constructor will same as the name of the class.
+
+this

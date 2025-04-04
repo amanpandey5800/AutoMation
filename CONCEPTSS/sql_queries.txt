@@ -1,0 +1,53 @@
+======================
+All Queries Number wise.
+
+Basic Queries--
+
+1.select * from brands;
+2.select * from products where list_price > 1000;
+3.select * from customers where state="NY";
+4.select first_name, email from customers;
+5. select * from sales.orders where order_date like "2016%";
+6. select * from categories where category_name="Mountain Bikes";
+7.select category_name, count(*) from production.categories group by category_name;
+8.select * from production.products where list_price =(select max(list_price) from production.products);
+9.select  from customers.first_name ,orders.order_id from customers join orders on customers.customer_id = orders.customer_id;
+10. select product_name from production.products where model_year = "2017%";  select * from production.products where model_year = "2017%";
+
+=================================================================
+Aggregation and Grouping
+
+1. select avg(list_price) from production.products;
+2. select product_id , count(quantity) from sales.order_items group by product_id;
+3. select sales.orders.store_id, sum(sales.order_items.list_price) from sales.orders join sales.order_items on sales.orders.order_id = sales.order_items.order_id group by sales.orders.store_id;
+4. select customer_id,count(order_id) from sales.orders group by customer_id;
+5. select sum(discount) from sales.order_items;
+6. select avg(list_price) from production.products group by product_id;
+7. select  month(order_date) ,count(order_id) from sales.orders group by month(order_date);
+8. select product_id,sum(list_price) from sales.order_items group by product_id;
+9. select state,count(customer_id) from sales.customers group by state;
+10. select year(order_date),count(order_id) from sales.orders group by year(order_date);
+
+================================================================================================
+JOINS
+
+1.  select order_items.order_id,products.product_id ,products.product_name,products.model_year from sales.order_items
+ 	join  production.products on sales.order_items.product_id=production.products.product_id;
+2. select customers.customer_id, customers.first_name,customers.last_name, orders.order_id, orders.order_date from sales.customers join sales.orders on sales.customers.customer_id = sales.orders.customer_id;
+3.  select * from production.products left join sales.order_items on production.products.product_id = sales.order_items.product_id;
+4. select * from sales.staffs join sales.stores  on sales.staffs.store_id = sales.stores.store_id join sales.orders on sales.staffs.store_id=sales.orders.store_id;
+5. select products.product_name, products.product_id,products.category_id from production.products  join production.categories on production.products.category_id=production.categories.category_id;
+6. 
+7. select * from orders join customers on sales.orders.customer_id = sales.customers.customer_id where customers.state="CA";
+8. select production.products.product_name, count(sales.order_items.order_id) as quantity from production.products left join sales.order_items on production.products.product_id = sales.order_items.order_id group by production.products.product_id;
+9.select sales.order_items.order_id, production.categories.category_name from sales.order_items join production.products on sales.order_items.product_id = production.products.product_id join production.categories on production.products.category_id = production.categories.category_id where production.categories.category_name = "electric bikes";
+10. select sales.orders.order_id, sales.order_items.discount from sales.orders join sales.order_items on sales.orders.order_id = sales.order_items.order_id;
+
+
+
+
+
+
+
+
+
